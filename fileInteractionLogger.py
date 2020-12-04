@@ -42,19 +42,17 @@ Returns a rounded version of the time elapsed between the given times
 def getElapsedtime(endTime, startTime):
     return round(endTime - startTime, 4)
 
-
-
 """
 Calculates the average time to read or write a line
 
 :param elapsedTime: How much time has passed between start and stop of process
 :type elapsedTime: float
-:param totalSentences: Total number of sentences/lines being examined
+:param totalLines: Total number of sentences/lines being examined
 :type int
-:returns: float - The average time to read or write a line
+:returns: float - The average time to read or write each line
 """
-def averageTimePerLine(startTime, endTime, totalSentences):
-    return getElapsedtime(endTime, startTime) / totalSentences
+def getAverageTimePerLine(elapsedTime, totalLines):
+    return elapsedTime / totalLines
 
 ## Generates a log file containing log output
 def useConsole():
@@ -67,13 +65,13 @@ def useConsole():
     logger.debug("# Init imperdietCount counter, the number of occurrences of 'imperdiet' in this file")
     imperdietCount = 0
 
-    # Init counter of number of sentences with "imperdiet".
-    logger.debug("# Init counter of number of sentences with 'imperdiet'")
+    # Init counter of number of sentences/lines with "imperdiet".
+    logger.debug("# Init counter of number of sentences/lines with 'imperdiet'")
     sentencesContainingImperdiet = 0
 
-    # 'totalSentences' is the total number of sentences the user enters or is read from input file
-    logger.debug("# Init 'totalSentences', the total number of sentences the user enters or is read from input file")
-    totalSentences = 0
+    # 'totalLines' is the total number of sentences/lines the user enters or is read from input file
+    logger.debug("# Init 'totalLines', the total number of sentences/lines the user enters or is read from input file")
+    totalLines = 0
 
     ## Flags
 
@@ -124,16 +122,16 @@ def useConsole():
     # serves as flag to exit input mode as well as collecting user input itself.
     logger.debug("Prime userIn variable: userIn = ''")
     userIn = ''
-
     if (fileMode == 'w+'):
 
         # subtotalTime is a counter to track the total time spent entering sentences
         logger.debug("Prime subtotalTime counter to 0")
         subtotalTime = 0
 
-        # Prime initial startTime value to begin writing first line
-        logger.debug("# Prime initial startTime value to begin writing first line")
-        startTime = time.time()
+        # Prime initial startWriteTime value to begin writing first line
+        logger.debug("# Prime initial startWriteTime value to begin writing first line")
+        startWriteTime = time.time()
+        logger.debug("initial startWriteTime = " + str(round(startWriteTime, 4)))
 
         while(userIn.lower() != 'x'):
 
@@ -145,25 +143,31 @@ def useConsole():
 
                 # Update our imperdietCount with the number of "imperdiet" occurrences on this line:
                 imperdietCount += countImperdiets(userIn)
-            totalSentences += 1
+            totalLines += 1
             openFile.write(userIn + '\n')
 
             # Mark the endTime of writing the line
-            endTime = time.time()
-            logger.debug("# Mark the endTime of writing the line: " + str(endTime))
-            subtotalTime += getElapsedtime(endTime, startTime)
+            endWriteTime = time.time()
+            logger.debug("# Mark the endTime of writing the line: " + str(round(endWriteTime, 2)))
+            subtotalTime += getElapsedtime(endWriteTime, startWriteTime)
 
             # Begin startTime for next line
-            logger.debug("# Mark the startTime of writing the next line: " + str(startTime))
-            startTime = time.time()
+            logger.debug("# Mark the startTime of writing the next line: " + str(startWriteTime))
+            startWriteTime = time.time()
 
         logger.info("Exit user input WRITE loop")
-        logger.debug("User entered " + str(totalSentences - 1) + " sentences.\n")
-        print("\nUser entered " + str(totalSentences - 1) + " sentences.\n")
+        totalLines -= 1
+        logger.debug("User entered " + str(totalLines) + " sentences.")
+        logger.debug("Average time to enter a sentence: " + str(getAverageTimePerLine(subtotalTime, totalLines)))
+        print("\nUser entered " + str(totalLines) + " sentences.\n")
         openFile.close()
 
     ## 'READ' mode:
     elif (fileMode == 'r'):
+        # Prime initial startReadTime value to begin reading first line
+        logger.debug("# Prime initial startReadTime value to begin reading first line")
+        startReadTime = time.time()
+        logger.debug("initial startReadTime = " + str(round(startReadTime, 4)))
         logger.info("'READ' mode: reading from " + ourFile + ".txt")
         # Create string/object "readFile" associated with contents of "ourFile", the file to be read from:
         readFile = openFile.readlines()
@@ -171,25 +175,38 @@ def useConsole():
         # Analyze readFile
         logger.info("Analyzing " + ourFile)
 
-        # Split string representing file's text contents into sentences
-        totalSentences = len(readFile)
-        logger.debug("totalSentences = " + str(totalSentences))
+        # Split string representing file's text contents into lines
+        totalLines = len(readFile)
+        logger.debug("totalLines = " + str(totalLines))
 
         # Iterate through list representing text of document
-        logger.debug("Set number of lines to 0; will be used to enumberate the lines of our input file")
+        logger.debug("Set number of lines to 0; will be used to enumerate the lines of our input file")
         lines = 0
         for line in readFile:
             lines += 1
             logger.debug("For line " + str(lines) + " in readFile: ")
-            # Update total number of "imperdiet" in document:
+            # Update total number of "imperdiet" found in document:
             imperdietCount += line.count("imperdiet")
             logger.debug(str(imperdietCount) + " instances of 'imperdiet' thus far.")
             # Update number of lines containing "imperdiet" if current sentence contains it
             if("imperdiet" in line):
                 logger.debug("'Imperdiet' in this line?: " + str("imperdiet" in line))
                 sentencesContainingImperdiet += 1
+        # When finished reading file, get endReadtime
+        logger.debug("# When finished reading file, get endReadtime")
+        endReadTime = time.time()
 
-    # Display final stats of log, output 'consoleapp.log' file
+        logger.info("End reading process")
+
+        # Calculate average time to read each line
+        logger.info("# Calculate average time to read each line")
+        averageReadTime = getAverageTimePerLine(getElapsedtime(endReadTime, startReadTime), totalLines)
+        logger.debug("Average time to read each line: " + str(averageReadTime) + " seconds.")
+
+
+
+
+    ## Display final stats of log, output 'consoleapp.log' file
     logger.debug("# Display final stats of log, output 'consoleapp.log' file")
 
     print("Found " + str(imperdietCount) + " occurrences of the word 'imperdiet'.\n")
