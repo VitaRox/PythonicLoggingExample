@@ -1,12 +1,9 @@
 import logging
 import logging.config
-
 import time
 
-import sys
-
 """
-.. module:: main.py_v1
+.. module:: fileInteractionLogger_v1
 :platform: Unix, Windows
 :synopsis: Console-input app demonstrating use of logs
 .. moduleauthor:: Vita Harvey <vita.harvey@seattlecolleges.edu>
@@ -39,7 +36,7 @@ Returns a rounded version of the time elapsed between the given times
 :type startTime: float
 :returns: float - The delta between the given endTime and startTime
 """
-def getElapsedtime(endTime, startTime):
+def getElapsedTime(endTime, startTime):
     return round(endTime - startTime, 4)
 
 """
@@ -114,23 +111,31 @@ def useConsole():
     logger.debug(ourFile + " is the object representing the file we're reading from/writing to")
 
     # Conditionally handle user input depending on fileMode user entered
-    logger.debug("# Conditionally handle user input depending on fileMode user entered.")
+    logger.info("# Conditionally handle user input depending on fileMode user entered.")
 
     ## 'WRITE' mode:
     logger.debug("'WRITE' mode: writing to " + ourFile + ".txt")
-    # Prime 'userIn' variable:
-    # serves as flag to exit input mode as well as collecting user input itself.
-    logger.debug("Prime userIn variable: userIn = ''")
+    # Init 'userIn' variable:
+    # Serves as flag to exit input mode, as well as collecting user input itself.
+    logger.info("# Serves as flag to exit input mode, as well as collecting user input itself.")
+    logger.debug("Init userIn variable: userIn = ''")
     userIn = ''
     if (fileMode == 'w+'):
 
         # subtotalTime is a counter to track the total time spent entering sentences
-        logger.debug("Prime subtotalTime counter to 0")
+        logger.info("# subtotalTime is a counter to track the total time spent entering sentences")
+        logger.debug("Init subtotalTime counter to 0 seconds")
         subtotalTime = 0
 
+        # imperdietSubtotalTime is total amount of time spent looking for instances of "imperdiet"
+        imperdietSubtotalTime = 0
+
         # Prime initial startWriteTime value to begin writing first line
-        logger.debug("# Prime initial startWriteTime value to begin writing first line")
+        logger.debug("Initialize imperdietSubtotalTime counter to 0 seconds")
+        logger.info("# Prime initial startWriteTime value to begin writing first line")
         startWriteTime = time.time()
+        startImperdietTime = startWriteTime
+        logger.debug("initial startImperdietTime = " + str(round(startWriteTime, 4)))
         logger.debug("initial startWriteTime = " + str(round(startWriteTime, 4)))
 
         while(userIn.lower() != 'x'):
@@ -138,18 +143,27 @@ def useConsole():
             userIn = (input("Please type a sentence and press 'enter', or enter 'x' to quit, save, and exit: "))
 
             if ("imperdiet" in userIn):
+                endImperdietTime = time.time()
+                logger.debug("endImperdietTime = " + str(endImperdietTime))
+                elapsedImperdietTime = getElapsedTime
+                logger.debug("elapsedImperdietTime = " + str(elapsedImperdietTime))
                 # Increment our imperdiet-sentences counter:
                 sentencesContainingImperdiet += 1
+                logger.debug("sentencesContainingImperdiet is now " + str(sentencesContainingImperdiet))
 
                 # Update our imperdietCount with the number of "imperdiet" occurrences on this line:
                 imperdietCount += countImperdiets(userIn)
+                logger.debug("imperdietCount is now " + str(imperdietCount))
+
             totalLines += 1
+            logger.debug("totalLines is now " + str(totalLines) + " lines.")
+            logger.info("Writing this line to output .txt file...")
             openFile.write(userIn + '\n')
 
             # Mark the endTime of writing the line
             endWriteTime = time.time()
             logger.debug("# Mark the endTime of writing the line: " + str(round(endWriteTime, 2)))
-            subtotalTime += getElapsedtime(endWriteTime, startWriteTime)
+            subtotalTime += getElapsedTime(endWriteTime, startWriteTime)
 
             # Begin startTime for next line
             logger.debug("# Mark the startTime of writing the next line: " + str(startWriteTime))
@@ -158,14 +172,14 @@ def useConsole():
         logger.info("Exit user input WRITE loop")
         totalLines -= 1
         logger.debug("User entered " + str(totalLines) + " sentences.")
-        logger.debug("Average time to enter a sentence: " + str(getAverageTimePerLine(subtotalTime, totalLines)))
+        logger.debug("Average time to enter a sentence: " + str(getAverageTimePerLine(subtotalTime, totalLines)) + " seconds.")
         print("\nUser entered " + str(totalLines) + " sentences.\n")
         openFile.close()
 
     ## 'READ' mode:
     elif (fileMode == 'r'):
         # Prime initial startReadTime value to begin reading first line
-        logger.debug("# Prime initial startReadTime value to begin reading first line")
+        logger.info("# Prime initial startReadTime value to begin reading first line")
         startReadTime = time.time()
         logger.debug("initial startReadTime = " + str(round(startReadTime, 4)))
         logger.info("'READ' mode: reading from " + ourFile + ".txt")
@@ -173,7 +187,7 @@ def useConsole():
         readFile = openFile.readlines()
 
         # Analyze readFile
-        logger.info("Analyzing " + ourFile)
+        logger.info("Analyzing " + ourFile + ".txt")
 
         # Split string representing file's text contents into lines
         totalLines = len(readFile)
@@ -192,15 +206,15 @@ def useConsole():
             if("imperdiet" in line):
                 logger.debug("'Imperdiet' in this line?: " + str("imperdiet" in line))
                 sentencesContainingImperdiet += 1
-        # When finished reading file, get endReadtime
-        logger.debug("# When finished reading file, get endReadtime")
+        # When finished reading file, get endReadTime
+        logger.info("# When finished reading file, get endReadTime")
         endReadTime = time.time()
 
         logger.info("End reading process")
 
         # Calculate average time to read each line
         logger.info("# Calculate average time to read each line")
-        averageReadTime = getAverageTimePerLine(getElapsedtime(endReadTime, startReadTime), totalLines)
+        averageReadTime = getAverageTimePerLine(getElapsedTime(endReadTime, startReadTime), totalLines)
         logger.debug("Average time to read each line: " + str(averageReadTime) + " seconds.")
 
 
@@ -233,7 +247,7 @@ def main():
     logger.info("End execution timestamp: " + str(round(endTime, 4)))
 
     # Calculate total runtime
-    totalRuntime = getElapsedtime(endTime, startTime)
+    totalRuntime = getElapsedTime(endTime, startTime)
     logger.info("Total runtime: " + str(totalRuntime) + " seconds.")
 
 # Execute this program by calling the application method
