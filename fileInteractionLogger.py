@@ -119,31 +119,52 @@ def useConsole():
     logger.debug("# Conditionally handle user input depending on fileMode user entered.")
 
     ## 'WRITE' mode:
-    logger.debug("'WRITE' mode: writing to " + ourFile)
+    logger.debug("'WRITE' mode: writing to " + ourFile + ".txt")
     # Prime 'userIn' variable:
     # serves as flag to exit input mode as well as collecting user input itself.
     logger.debug("Prime userIn variable: userIn = ''")
     userIn = ''
+
     if (fileMode == 'w+'):
+
         # subtotalTime is a counter to track the total time spent entering sentences
-        logging.debug("Prime subtotalTime counter to 0")
+        logger.debug("Prime subtotalTime counter to 0")
         subtotalTime = 0
-        while(lower(userIn) != 'x'):
+
+        # Prime initial startTime value to begin writing first line
+        logger.debug("# Prime initial startTime value to begin writing first line")
+        startTime = time.time()
+
+        while(userIn.lower() != 'x'):
+
             userIn = (input("Please type a sentence and press 'enter', or enter 'x' to quit, save, and exit: "))
+
             if ("imperdiet" in userIn):
                 # Increment our imperdiet-sentences counter:
                 sentencesContainingImperdiet += 1
+
                 # Update our imperdietCount with the number of "imperdiet" occurrences on this line:
                 imperdietCount += countImperdiets(userIn)
-            totalSentences = totalSentences + 1
+            totalSentences += 1
             openFile.write(userIn + '\n')
+
+            # Mark the endTime of writing the line
+            endTime = time.time()
+            logger.debug("# Mark the endTime of writing the line: " + str(endTime))
+            subtotalTime += getElapsedtime(endTime, startTime)
+
+            # Begin startTime for next line
+            logger.debug("# Mark the startTime of writing the next line: " + str(startTime))
+            startTime = time.time()
+
+        logger.info("Exit user input WRITE loop")
         logger.debug("User entered " + str(totalSentences - 1) + " sentences.\n")
-        print("User entered " + str(totalSentences - 1) + " sentences.\n")
+        print("\nUser entered " + str(totalSentences - 1) + " sentences.\n")
         openFile.close()
 
     ## 'READ' mode:
     elif (fileMode == 'r'):
-        logger.info("'READ' mode: reading from " + ourFile)
+        logger.info("'READ' mode: reading from " + ourFile + ".txt")
         # Create string/object "readFile" associated with contents of "ourFile", the file to be read from:
         readFile = openFile.readlines()
 
@@ -166,7 +187,7 @@ def useConsole():
             # Update number of lines containing "imperdiet" if current sentence contains it
             if("imperdiet" in line):
                 logger.debug("'Imperdiet' in this line?: " + str("imperdiet" in line))
-                sentencesContainingImperdiet = sentencesContainingImperdiet + 1
+                sentencesContainingImperdiet += 1
 
     # Display final stats of log, output 'consoleapp.log' file
     logger.debug("# Display final stats of log, output 'consoleapp.log' file")
