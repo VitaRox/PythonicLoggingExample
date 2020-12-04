@@ -30,7 +30,33 @@ def countImperdiets(searchString):
     return searchString.count("imperdiet")
 
 
-# Generates a log file containing log output
+"""
+Returns a rounded version of the time elapsed between the given times
+
+:param endTime: Final recorded time
+:type endTime: float
+:param startTime: Begin recorded time
+:type startTime: float
+:returns: float - The delta between the given endTime and startTime
+"""
+def getElapsedtime(endTime, startTime):
+    return round(endTime - startTime, 4)
+
+
+
+"""
+Calculates the average time to read or write a line
+
+:param elapsedTime: How much time has passed between start and stop of process
+:type elapsedTime: float
+:param totalSentences: Total number of sentences/lines being examined
+:type int
+:returns: float - The average time to read or write a line
+"""
+def averageTimePerLine(startTime, endTime, totalSentences):
+    return getElapsedtime(endTime, startTime) / totalSentences
+
+## Generates a log file containing log output
 def useConsole():
 
     logger.debug("useConsole() called")
@@ -52,7 +78,7 @@ def useConsole():
     ## Flags
 
     # Initialize fileMode
-    logger.info("Getting user input:")
+    logger.info("Getting user input: ")
     logger.debug("# Init fileMode")
     fileMode = ''
 
@@ -64,7 +90,6 @@ def useConsole():
         # fileMode can be 'r' for 'read' or 'w' for 'write'
         fileMode = input("Please enter a 'w' for 'write mode' or a 'r' for 'read " +
             "  ")
-
         # userError and following code is for retrospective analytics, re:UX:
         # tldr: Determine if this interface is usable by most end-users in
         # most use-cases.
@@ -78,31 +103,36 @@ def useConsole():
         + "'read mode' Please enter the name of the file to read from.\n")
 
     # Open the file to be read from/written to using the appropriate name and file-mode
-    logger.debug("User opened " + ourFile + " with the "  + "'" + fileMode + "'"+ " file-mode.")
+    logger.debug("User opened " + ourFile + " in the "  + "'" + fileMode + "'"+ " file-mode.")
 
     # If user enters 'w' for 'write', append a '+' to 'fileMode' so
     # can be written to AND read from (for counting purposes)
-    if(fileMode == 'w'):
+    if (fileMode == 'w'):
         fileMode = "w+"
+        logger.debug("'w' converted to 'w+': fileMode = " + fileMode)
     # 'openFile' is object representing the file we're reading from/writing to
+    # 'ourFile' is a string representing name of 'openFile'
     openFile = open(ourFile + ".txt", fileMode)
-    logger.debug(ourFile + " is object representing the file we're reading from/writing to")
+    logger.debug(ourFile + " is the object representing the file we're reading from/writing to")
 
     # Conditionally handle user input depending on fileMode user entered
     logger.debug("# Conditionally handle user input depending on fileMode user entered.")
 
-    # 'WRITE' mode:
-    logger.debug("'Write' mode: writing to " + ourFile)
-    # Prime 'userIn' variable: serves as flag to exit input mode as well as collecting
-    # user input itself.
-    logger.debug("Prime userIn: userIn = ''")
+    ## 'WRITE' mode:
+    logger.debug("'WRITE' mode: writing to " + ourFile)
+    # Prime 'userIn' variable:
+    # serves as flag to exit input mode as well as collecting user input itself.
+    logger.debug("Prime userIn variable: userIn = ''")
     userIn = ''
     if (fileMode == 'w+'):
-        while(userIn != 'X'):
-            userIn = (input("Please type a sentence and press 'enter', or enter 'X' to quit, save, and exit: "))
+        # subtotalTime is a counter to track the total time spent entering sentences
+        logging.debug("Prime subtotalTime counter to 0")
+        subtotalTime = 0
+        while(lower(userIn) != 'x'):
+            userIn = (input("Please type a sentence and press 'enter', or enter 'x' to quit, save, and exit: "))
             if ("imperdiet" in userIn):
                 # Increment our imperdiet-sentences counter:
-                sentencesContainingImperdiet = sentencesContainingImperdiet + 1
+                sentencesContainingImperdiet += 1
                 # Update our imperdietCount with the number of "imperdiet" occurrences on this line:
                 imperdietCount += countImperdiets(userIn)
             totalSentences = totalSentences + 1
@@ -111,9 +141,9 @@ def useConsole():
         print("User entered " + str(totalSentences - 1) + " sentences.\n")
         openFile.close()
 
-    # 'READ' mode:
+    ## 'READ' mode:
     elif (fileMode == 'r'):
-        logger.info("'Read' mode: reading from " + ourFile)
+        logger.info("'READ' mode: reading from " + ourFile)
         # Create string/object "readFile" associated with contents of "ourFile", the file to be read from:
         readFile = openFile.readlines()
 
@@ -152,18 +182,21 @@ def useConsole():
 def main():
     logger.info("Calling application method now")
 
+    # Start execution time
     startTime = time.time()
-    logger.info("Start execution time: " + str(startTime))
+    logger.info("Start execution timestamp: " + str(round(startTime, 4)))
 
     # call our console input function
-    logger.info("Call useConsole() method: ")
+    logger.info("Call useConsole() method")
     useConsole()
 
+    # End execution time
     endTime = time.time()
-    logger.info("End execution time = " + str(endTime))
+    logger.info("End execution timestamp: " + str(round(endTime, 4)))
 
-    totalRuntime = endTime - startTime
-    logger.info("Total runtime: " + str(totalRuntime))
+    # Calculate total runtime
+    totalRuntime = getElapsedtime(endTime, startTime)
+    logger.info("Total runtime: " + str(totalRuntime) + " seconds.")
 
 # Execute this program by calling the application method
 main()
