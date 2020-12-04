@@ -15,6 +15,7 @@ logging.config.fileConfig('logging.conf', disable_existing_loggers=False)
 # Create logger instance
 logger = logging.getLogger(__name__)
 
+
 """
 Counts the number of times the word, "imperdiet" appears in the given text
 
@@ -38,6 +39,7 @@ Returns a rounded version of the time elapsed between the given times
 """
 def getElapsedTime(endTime, startTime):
     return round(endTime - startTime, 4)
+
 
 """
 Calculates the average time to read or write a line
@@ -69,6 +71,9 @@ def useConsole():
     # 'totalLines' is the total number of sentences/lines the user enters or is read from input file
     logger.debug("# Init 'totalLines', the total number of sentences/lines the user enters or is read from input file")
     totalLines = 0
+
+    # imperdietSearchTime is total amount of time spent looking for instances of "imperdiet"
+    imperdietSearchTime = 0
 
     ## Flags
 
@@ -113,7 +118,9 @@ def useConsole():
     # Conditionally handle user input depending on fileMode user entered
     logger.info("# Conditionally handle user input depending on fileMode user entered.")
 
+    ####
     ## 'WRITE' mode:
+    ####
     logger.debug("'WRITE' mode: writing to " + ourFile + ".txt")
     # Init 'userIn' variable:
     # Serves as flag to exit input mode, as well as collecting user input itself.
@@ -127,11 +134,8 @@ def useConsole():
         logger.debug("Init subtotalTime counter to 0 seconds")
         subtotalTime = 0
 
-        # imperdietSubtotalTime is total amount of time spent looking for instances of "imperdiet"
-        imperdietSubtotalTime = 0
-
         # Prime initial startWriteTime value to begin writing first line
-        logger.debug("Initialize imperdietSubtotalTime counter to 0 seconds")
+        logger.debug("Initialize imperdietSearchTime counter to 0 seconds")
         logger.info("# Prime initial startWriteTime value to begin writing first line")
         startWriteTime = time.time()
         startImperdietTime = startWriteTime
@@ -143,10 +147,15 @@ def useConsole():
             userIn = (input("Please type a sentence and press 'enter', or enter 'x' to quit, save, and exit: "))
 
             if ("imperdiet" in userIn):
+
                 endImperdietTime = time.time()
                 logger.debug("endImperdietTime = " + str(endImperdietTime))
-                elapsedImperdietTime = getElapsedTime
+                elapsedImperdietTime = getElapsedTime(endImperdietTime, startImperdietTime)
+                # Update the imperdietSearchTime
+                imperdietSearchTime += elapsedImperdietTime
+                logger.debug("imperdietSearchTime is now totalling " + str(imperdietSearchTime) + " seconds.")
                 logger.debug("elapsedImperdietTime = " + str(elapsedImperdietTime))
+
                 # Increment our imperdiet-sentences counter:
                 sentencesContainingImperdiet += 1
                 logger.debug("sentencesContainingImperdiet is now " + str(sentencesContainingImperdiet))
@@ -170,24 +179,32 @@ def useConsole():
             startWriteTime = time.time()
 
         logger.info("Exit user input WRITE loop")
+
+        # Compensate for fencepost scenario in above 'for' loop: totalLines--
         totalLines -= 1
-        logger.debug("User entered " + str(totalLines) + " sentences.")
-        logger.debug("Average time to enter a sentence: " + str(getAverageTimePerLine(subtotalTime, totalLines)) + " seconds.")
+        logger.info("User entered " + str(totalLines) + " sentences.")
+        logger.info("Average time to enter a sentence: " + str(getAverageTimePerLine(subtotalTime, totalLines)) + " seconds.")
+        # Calculate average time to find "imperdiet" in a sentence
+        logger.debug("# Calculate average time to find 'imperdiet' in a sentence: getAverageTime(imperdietSearchTime / totalLines)")
+        averageImperdietSearchTime = getAverageTimePerLine(imperdietSearchTime, totalLines)
+        logger.info("Average time to find 'imperdiet' in a sentence: " + str(averageImperdietSearchTime) + " seconds")
         print("\nUser entered " + str(totalLines) + " sentences.\n")
         openFile.close()
 
+    ####
     ## 'READ' mode:
+    ####
     elif (fileMode == 'r'):
         # Prime initial startReadTime value to begin reading first line
-        logger.info("# Prime initial startReadTime value to begin reading first line")
+        logger.info("# Get initial startReadTime value to begin reading first line")
         startReadTime = time.time()
-        logger.debug("initial startReadTime = " + str(round(startReadTime, 4)))
+        logger.debug("Initial startReadTime = " + str(round(startReadTime, 4)))
         logger.info("'READ' mode: reading from " + ourFile + ".txt")
         # Create string/object "readFile" associated with contents of "ourFile", the file to be read from:
         readFile = openFile.readlines()
 
         # Analyze readFile
-        logger.info("Analyzing " + ourFile + ".txt")
+        logger.debug("Analyzing " + ourFile + ".txt")
 
         # Split string representing file's text contents into lines
         totalLines = len(readFile)
@@ -196,29 +213,41 @@ def useConsole():
         # Iterate through list representing text of document
         logger.debug("Set number of lines to 0; will be used to enumerate the lines of our input file")
         lines = 0
+
+        logger.debug("for line in readFile")
         for line in readFile:
+            startImperdietReadTime = time.time()
             lines += 1
             logger.debug("For line " + str(lines) + " in readFile: ")
+
             # Update total number of "imperdiet" found in document:
             imperdietCount += line.count("imperdiet")
             logger.debug(str(imperdietCount) + " instances of 'imperdiet' thus far.")
-            # Update number of lines containing "imperdiet" if current sentence contains it
+            logger.debug("'Imperdiet' in this line?: " + str("imperdiet" in line))
             if("imperdiet" in line):
-                logger.debug("'Imperdiet' in this line?: " + str("imperdiet" in line))
+                endImperdietReadTime = time.time()
+                imperdietSearchTime += getElapsedTime(endImperdietReadTime, startImperdietReadTime)
+                logger.debug("imperdietSearchTime is now " + str(imperdietSearchTime) + " seconds.")
+                # Update number of lines containing "imperdiet" if current sentence contains it
+                logger.info("# Update number of lines containing 'imperdiet' if current sentence contains it")
                 sentencesContainingImperdiet += 1
-        # When finished reading file, get endReadTime
+
+        # When finished reading file, get endReadTime of file
         logger.info("# When finished reading file, get endReadTime")
         endReadTime = time.time()
+        logger.debug("endReadTime is " + str(endReadTime) + " seconds.")
 
-        logger.info("End reading process")
+        logger.info("# Calculate average time to find the word 'imperdiet' in a sentence")
+        logger.info("Average time to find 'imperdiet' in a sentence if present = getAverageTimePerLine(imperdietSearchTime, sentencesContainingImperdiet)")
+        # Calculate average time to find the word 'imperdiet' in a sentence
+        averageImperdietSearchTime = getAverageTimePerLine(imperdietSearchTime, sentencesContainingImperdiet)
+        logger.debug("Average imperdiet search time: " + str(averageImperdietSearchTime) + " seconds.")
+        logger.debug("End reading process")
 
         # Calculate average time to read each line
         logger.info("# Calculate average time to read each line")
         averageReadTime = getAverageTimePerLine(getElapsedTime(endReadTime, startReadTime), totalLines)
-        logger.debug("Average time to read each line: " + str(averageReadTime) + " seconds.")
-
-
-
+        logger.info("Average time to read each line: " + str(averageReadTime) + " seconds.")
 
     ## Display final stats of log, output 'consoleapp.log' file
     logger.debug("# Display final stats of log, output 'consoleapp.log' file")
