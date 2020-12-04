@@ -140,8 +140,10 @@ def useConsole():
 
     # Display final stats of log, output 'consoleapp.log' file
     logger.debug("# Display final stats of log, output 'consoleapp.log' file")
+
     print("Found " + str(imperdietCount) + " occurrences of the word 'imperdiet'.\n")
     logger.debug("Found " + str(imperdietCount) + " occurrences of the word 'imperdiet'.\n")
+
     print("There were " + str(sentencesContainingImperdiet) + " sentences containing 'imperdiet'.\n")
     logger.debug("There were " + str(sentencesContainingImperdiet) + " sentences containing 'imperdiet'.\n")
 

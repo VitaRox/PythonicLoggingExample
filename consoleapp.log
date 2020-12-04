@@ -1,0 +1,668 @@
+2020-12-03 17:19:57,561 (main --> main[151]) [INFO]: Calling application method now
+2020-12-03 17:19:57,562 (main --> main[154]) [INFO]: Start execution time: 1607044797.5620842
+2020-12-03 17:19:57,562 (main --> main[157]) [INFO]: Call useConsole() method: 
+2020-12-03 17:19:57,562 (main --> useConsole[36]) [DEBUG]: useConsole() called
+2020-12-03 17:19:57,562 (main --> useConsole[41]) [DEBUG]: # Init imperdietCount counter, the number of occurrences of 'imperdiet' in this file
+2020-12-03 17:19:57,562 (main --> useConsole[45]) [DEBUG]: # Init counter of number of sentences with 'imperdiet'
+2020-12-03 17:19:57,562 (main --> useConsole[49]) [DEBUG]: # Init 'totalSentences', the total number of sentences the user enters or is read from input file
+2020-12-03 17:19:57,562 (main --> useConsole[55]) [INFO]: Getting user input:
+2020-12-03 17:19:57,562 (main --> useConsole[56]) [DEBUG]: # Init fileMode
+2020-12-03 17:19:57,562 (main --> useConsole[60]) [DEBUG]: userError = 0, tracking # of mistaken user inputs:
+2020-12-03 17:19:58,928 (main --> useConsole[71]) [DEBUG]: Incremement userError by 1
+2020-12-03 17:20:01,698 (main --> useConsole[81]) [DEBUG]: User opened Ipsum_Lorem with the 'r' file-mode.
+2020-12-03 17:20:01,698 (main --> useConsole[89]) [DEBUG]: Ipsum_Lorem is object representing the file we're reading from/writing to
+2020-12-03 17:20:01,698 (main --> useConsole[92]) [DEBUG]: # Conditionally handle user input depending on fileMode user entered.
+2020-12-03 17:20:01,698 (main --> useConsole[95]) [DEBUG]: 'Write' mode: writing to Ipsum_Lorem
+2020-12-03 17:20:01,698 (main --> useConsole[98]) [DEBUG]: Prime userIn: userIn = ''
+2020-12-03 17:20:01,698 (main --> useConsole[116]) [INFO]: 'Read' mode: reading from Ipsum_Lorem
+2020-12-03 17:20:01,699 (main --> useConsole[121]) [INFO]: Analyzing Ipsum_Lorem
+2020-12-03 17:20:01,699 (main --> useConsole[125]) [DEBUG]: totalSentences = 299
+2020-12-03 17:20:01,699 (main --> useConsole[128]) [DEBUG]: Set number of lines to 0; will be used to enumberate the lines of our input file
+2020-12-03 17:20:01,699 (main --> useConsole[132]) [DEBUG]: For line 1 in readFile: 
+2020-12-03 17:20:01,699 (main --> useConsole[135]) [DEBUG]: 1 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,699 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,699 (main --> useConsole[132]) [DEBUG]: For line 2 in readFile: 
+2020-12-03 17:20:01,699 (main --> useConsole[135]) [DEBUG]: 1 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,699 (main --> useConsole[132]) [DEBUG]: For line 3 in readFile: 
+2020-12-03 17:20:01,699 (main --> useConsole[135]) [DEBUG]: 2 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,699 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,699 (main --> useConsole[132]) [DEBUG]: For line 4 in readFile: 
+2020-12-03 17:20:01,700 (main --> useConsole[135]) [DEBUG]: 2 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,700 (main --> useConsole[132]) [DEBUG]: For line 5 in readFile: 
+2020-12-03 17:20:01,700 (main --> useConsole[135]) [DEBUG]: 2 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,700 (main --> useConsole[132]) [DEBUG]: For line 6 in readFile: 
+2020-12-03 17:20:01,700 (main --> useConsole[135]) [DEBUG]: 2 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,700 (main --> useConsole[132]) [DEBUG]: For line 7 in readFile: 
+2020-12-03 17:20:01,700 (main --> useConsole[135]) [DEBUG]: 2 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,700 (main --> useConsole[132]) [DEBUG]: For line 8 in readFile: 
+2020-12-03 17:20:01,700 (main --> useConsole[135]) [DEBUG]: 2 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,700 (main --> useConsole[132]) [DEBUG]: For line 9 in readFile: 
+2020-12-03 17:20:01,700 (main --> useConsole[135]) [DEBUG]: 2 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,700 (main --> useConsole[132]) [DEBUG]: For line 10 in readFile: 
+2020-12-03 17:20:01,700 (main --> useConsole[135]) [DEBUG]: 2 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,700 (main --> useConsole[132]) [DEBUG]: For line 11 in readFile: 
+2020-12-03 17:20:01,700 (main --> useConsole[135]) [DEBUG]: 3 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,700 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,700 (main --> useConsole[132]) [DEBUG]: For line 12 in readFile: 
+2020-12-03 17:20:01,701 (main --> useConsole[135]) [DEBUG]: 3 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,701 (main --> useConsole[132]) [DEBUG]: For line 13 in readFile: 
+2020-12-03 17:20:01,701 (main --> useConsole[135]) [DEBUG]: 4 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,701 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,701 (main --> useConsole[132]) [DEBUG]: For line 14 in readFile: 
+2020-12-03 17:20:01,701 (main --> useConsole[135]) [DEBUG]: 4 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,701 (main --> useConsole[132]) [DEBUG]: For line 15 in readFile: 
+2020-12-03 17:20:01,701 (main --> useConsole[135]) [DEBUG]: 4 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,701 (main --> useConsole[132]) [DEBUG]: For line 16 in readFile: 
+2020-12-03 17:20:01,701 (main --> useConsole[135]) [DEBUG]: 4 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,701 (main --> useConsole[132]) [DEBUG]: For line 17 in readFile: 
+2020-12-03 17:20:01,701 (main --> useConsole[135]) [DEBUG]: 6 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,701 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,701 (main --> useConsole[132]) [DEBUG]: For line 18 in readFile: 
+2020-12-03 17:20:01,701 (main --> useConsole[135]) [DEBUG]: 6 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,701 (main --> useConsole[132]) [DEBUG]: For line 19 in readFile: 
+2020-12-03 17:20:01,701 (main --> useConsole[135]) [DEBUG]: 6 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,701 (main --> useConsole[132]) [DEBUG]: For line 20 in readFile: 
+2020-12-03 17:20:01,701 (main --> useConsole[135]) [DEBUG]: 6 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,701 (main --> useConsole[132]) [DEBUG]: For line 21 in readFile: 
+2020-12-03 17:20:01,702 (main --> useConsole[135]) [DEBUG]: 6 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,702 (main --> useConsole[132]) [DEBUG]: For line 22 in readFile: 
+2020-12-03 17:20:01,702 (main --> useConsole[135]) [DEBUG]: 6 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,702 (main --> useConsole[132]) [DEBUG]: For line 23 in readFile: 
+2020-12-03 17:20:01,702 (main --> useConsole[135]) [DEBUG]: 6 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,702 (main --> useConsole[132]) [DEBUG]: For line 24 in readFile: 
+2020-12-03 17:20:01,702 (main --> useConsole[135]) [DEBUG]: 6 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,702 (main --> useConsole[132]) [DEBUG]: For line 25 in readFile: 
+2020-12-03 17:20:01,702 (main --> useConsole[135]) [DEBUG]: 8 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,702 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,702 (main --> useConsole[132]) [DEBUG]: For line 26 in readFile: 
+2020-12-03 17:20:01,702 (main --> useConsole[135]) [DEBUG]: 8 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,702 (main --> useConsole[132]) [DEBUG]: For line 27 in readFile: 
+2020-12-03 17:20:01,702 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,702 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,702 (main --> useConsole[132]) [DEBUG]: For line 28 in readFile: 
+2020-12-03 17:20:01,702 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,702 (main --> useConsole[132]) [DEBUG]: For line 29 in readFile: 
+2020-12-03 17:20:01,702 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,703 (main --> useConsole[132]) [DEBUG]: For line 30 in readFile: 
+2020-12-03 17:20:01,703 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,703 (main --> useConsole[132]) [DEBUG]: For line 31 in readFile: 
+2020-12-03 17:20:01,703 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,703 (main --> useConsole[132]) [DEBUG]: For line 32 in readFile: 
+2020-12-03 17:20:01,703 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,703 (main --> useConsole[132]) [DEBUG]: For line 33 in readFile: 
+2020-12-03 17:20:01,703 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,703 (main --> useConsole[132]) [DEBUG]: For line 34 in readFile: 
+2020-12-03 17:20:01,703 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,703 (main --> useConsole[132]) [DEBUG]: For line 35 in readFile: 
+2020-12-03 17:20:01,703 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,703 (main --> useConsole[132]) [DEBUG]: For line 36 in readFile: 
+2020-12-03 17:20:01,704 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,704 (main --> useConsole[132]) [DEBUG]: For line 37 in readFile: 
+2020-12-03 17:20:01,704 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,704 (main --> useConsole[132]) [DEBUG]: For line 38 in readFile: 
+2020-12-03 17:20:01,704 (main --> useConsole[135]) [DEBUG]: 9 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,704 (main --> useConsole[132]) [DEBUG]: For line 39 in readFile: 
+2020-12-03 17:20:01,704 (main --> useConsole[135]) [DEBUG]: 10 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,704 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,704 (main --> useConsole[132]) [DEBUG]: For line 40 in readFile: 
+2020-12-03 17:20:01,704 (main --> useConsole[135]) [DEBUG]: 10 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,704 (main --> useConsole[132]) [DEBUG]: For line 41 in readFile: 
+2020-12-03 17:20:01,704 (main --> useConsole[135]) [DEBUG]: 10 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,704 (main --> useConsole[132]) [DEBUG]: For line 42 in readFile: 
+2020-12-03 17:20:01,704 (main --> useConsole[135]) [DEBUG]: 10 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,704 (main --> useConsole[132]) [DEBUG]: For line 43 in readFile: 
+2020-12-03 17:20:01,705 (main --> useConsole[135]) [DEBUG]: 10 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,705 (main --> useConsole[132]) [DEBUG]: For line 44 in readFile: 
+2020-12-03 17:20:01,705 (main --> useConsole[135]) [DEBUG]: 10 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,705 (main --> useConsole[132]) [DEBUG]: For line 45 in readFile: 
+2020-12-03 17:20:01,705 (main --> useConsole[135]) [DEBUG]: 10 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,705 (main --> useConsole[132]) [DEBUG]: For line 46 in readFile: 
+2020-12-03 17:20:01,705 (main --> useConsole[135]) [DEBUG]: 10 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,705 (main --> useConsole[132]) [DEBUG]: For line 47 in readFile: 
+2020-12-03 17:20:01,705 (main --> useConsole[135]) [DEBUG]: 11 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,705 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,705 (main --> useConsole[132]) [DEBUG]: For line 48 in readFile: 
+2020-12-03 17:20:01,705 (main --> useConsole[135]) [DEBUG]: 11 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,705 (main --> useConsole[132]) [DEBUG]: For line 49 in readFile: 
+2020-12-03 17:20:01,706 (main --> useConsole[135]) [DEBUG]: 11 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,706 (main --> useConsole[132]) [DEBUG]: For line 50 in readFile: 
+2020-12-03 17:20:01,706 (main --> useConsole[135]) [DEBUG]: 11 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,706 (main --> useConsole[132]) [DEBUG]: For line 51 in readFile: 
+2020-12-03 17:20:01,706 (main --> useConsole[135]) [DEBUG]: 11 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,706 (main --> useConsole[132]) [DEBUG]: For line 52 in readFile: 
+2020-12-03 17:20:01,706 (main --> useConsole[135]) [DEBUG]: 11 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,706 (main --> useConsole[132]) [DEBUG]: For line 53 in readFile: 
+2020-12-03 17:20:01,706 (main --> useConsole[135]) [DEBUG]: 11 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,706 (main --> useConsole[132]) [DEBUG]: For line 54 in readFile: 
+2020-12-03 17:20:01,706 (main --> useConsole[135]) [DEBUG]: 11 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,706 (main --> useConsole[132]) [DEBUG]: For line 55 in readFile: 
+2020-12-03 17:20:01,706 (main --> useConsole[135]) [DEBUG]: 13 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,706 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,706 (main --> useConsole[132]) [DEBUG]: For line 56 in readFile: 
+2020-12-03 17:20:01,706 (main --> useConsole[135]) [DEBUG]: 13 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,707 (main --> useConsole[132]) [DEBUG]: For line 57 in readFile: 
+2020-12-03 17:20:01,707 (main --> useConsole[135]) [DEBUG]: 13 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,707 (main --> useConsole[132]) [DEBUG]: For line 58 in readFile: 
+2020-12-03 17:20:01,707 (main --> useConsole[135]) [DEBUG]: 13 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,707 (main --> useConsole[132]) [DEBUG]: For line 59 in readFile: 
+2020-12-03 17:20:01,707 (main --> useConsole[135]) [DEBUG]: 13 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,707 (main --> useConsole[132]) [DEBUG]: For line 60 in readFile: 
+2020-12-03 17:20:01,707 (main --> useConsole[135]) [DEBUG]: 13 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,707 (main --> useConsole[132]) [DEBUG]: For line 61 in readFile: 
+2020-12-03 17:20:01,707 (main --> useConsole[135]) [DEBUG]: 13 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,707 (main --> useConsole[132]) [DEBUG]: For line 62 in readFile: 
+2020-12-03 17:20:01,707 (main --> useConsole[135]) [DEBUG]: 13 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,707 (main --> useConsole[132]) [DEBUG]: For line 63 in readFile: 
+2020-12-03 17:20:01,707 (main --> useConsole[135]) [DEBUG]: 14 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,707 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,707 (main --> useConsole[132]) [DEBUG]: For line 64 in readFile: 
+2020-12-03 17:20:01,707 (main --> useConsole[135]) [DEBUG]: 14 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,707 (main --> useConsole[132]) [DEBUG]: For line 65 in readFile: 
+2020-12-03 17:20:01,707 (main --> useConsole[135]) [DEBUG]: 14 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,707 (main --> useConsole[132]) [DEBUG]: For line 66 in readFile: 
+2020-12-03 17:20:01,707 (main --> useConsole[135]) [DEBUG]: 14 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,707 (main --> useConsole[132]) [DEBUG]: For line 67 in readFile: 
+2020-12-03 17:20:01,707 (main --> useConsole[135]) [DEBUG]: 16 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,708 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,708 (main --> useConsole[132]) [DEBUG]: For line 68 in readFile: 
+2020-12-03 17:20:01,708 (main --> useConsole[135]) [DEBUG]: 16 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,708 (main --> useConsole[132]) [DEBUG]: For line 69 in readFile: 
+2020-12-03 17:20:01,708 (main --> useConsole[135]) [DEBUG]: 16 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,708 (main --> useConsole[132]) [DEBUG]: For line 70 in readFile: 
+2020-12-03 17:20:01,708 (main --> useConsole[135]) [DEBUG]: 16 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,708 (main --> useConsole[132]) [DEBUG]: For line 71 in readFile: 
+2020-12-03 17:20:01,708 (main --> useConsole[135]) [DEBUG]: 16 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,708 (main --> useConsole[132]) [DEBUG]: For line 72 in readFile: 
+2020-12-03 17:20:01,708 (main --> useConsole[135]) [DEBUG]: 16 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,708 (main --> useConsole[132]) [DEBUG]: For line 73 in readFile: 
+2020-12-03 17:20:01,708 (main --> useConsole[135]) [DEBUG]: 17 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,708 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,708 (main --> useConsole[132]) [DEBUG]: For line 74 in readFile: 
+2020-12-03 17:20:01,708 (main --> useConsole[135]) [DEBUG]: 17 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,708 (main --> useConsole[132]) [DEBUG]: For line 75 in readFile: 
+2020-12-03 17:20:01,708 (main --> useConsole[135]) [DEBUG]: 17 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,708 (main --> useConsole[132]) [DEBUG]: For line 76 in readFile: 
+2020-12-03 17:20:01,708 (main --> useConsole[135]) [DEBUG]: 17 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,708 (main --> useConsole[132]) [DEBUG]: For line 77 in readFile: 
+2020-12-03 17:20:01,709 (main --> useConsole[135]) [DEBUG]: 17 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,709 (main --> useConsole[132]) [DEBUG]: For line 78 in readFile: 
+2020-12-03 17:20:01,709 (main --> useConsole[135]) [DEBUG]: 17 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,709 (main --> useConsole[132]) [DEBUG]: For line 79 in readFile: 
+2020-12-03 17:20:01,709 (main --> useConsole[135]) [DEBUG]: 17 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,709 (main --> useConsole[132]) [DEBUG]: For line 80 in readFile: 
+2020-12-03 17:20:01,709 (main --> useConsole[135]) [DEBUG]: 17 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,709 (main --> useConsole[132]) [DEBUG]: For line 81 in readFile: 
+2020-12-03 17:20:01,709 (main --> useConsole[135]) [DEBUG]: 18 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,709 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,709 (main --> useConsole[132]) [DEBUG]: For line 82 in readFile: 
+2020-12-03 17:20:01,709 (main --> useConsole[135]) [DEBUG]: 18 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,709 (main --> useConsole[132]) [DEBUG]: For line 83 in readFile: 
+2020-12-03 17:20:01,709 (main --> useConsole[135]) [DEBUG]: 18 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,709 (main --> useConsole[132]) [DEBUG]: For line 84 in readFile: 
+2020-12-03 17:20:01,709 (main --> useConsole[135]) [DEBUG]: 18 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,709 (main --> useConsole[132]) [DEBUG]: For line 85 in readFile: 
+2020-12-03 17:20:01,709 (main --> useConsole[135]) [DEBUG]: 18 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,709 (main --> useConsole[132]) [DEBUG]: For line 86 in readFile: 
+2020-12-03 17:20:01,709 (main --> useConsole[135]) [DEBUG]: 18 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,709 (main --> useConsole[132]) [DEBUG]: For line 87 in readFile: 
+2020-12-03 17:20:01,710 (main --> useConsole[135]) [DEBUG]: 19 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,710 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,710 (main --> useConsole[132]) [DEBUG]: For line 88 in readFile: 
+2020-12-03 17:20:01,710 (main --> useConsole[135]) [DEBUG]: 19 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,710 (main --> useConsole[132]) [DEBUG]: For line 89 in readFile: 
+2020-12-03 17:20:01,710 (main --> useConsole[135]) [DEBUG]: 20 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,710 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,710 (main --> useConsole[132]) [DEBUG]: For line 90 in readFile: 
+2020-12-03 17:20:01,710 (main --> useConsole[135]) [DEBUG]: 20 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,710 (main --> useConsole[132]) [DEBUG]: For line 91 in readFile: 
+2020-12-03 17:20:01,710 (main --> useConsole[135]) [DEBUG]: 20 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,710 (main --> useConsole[132]) [DEBUG]: For line 92 in readFile: 
+2020-12-03 17:20:01,710 (main --> useConsole[135]) [DEBUG]: 20 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,710 (main --> useConsole[132]) [DEBUG]: For line 93 in readFile: 
+2020-12-03 17:20:01,710 (main --> useConsole[135]) [DEBUG]: 21 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,710 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,710 (main --> useConsole[132]) [DEBUG]: For line 94 in readFile: 
+2020-12-03 17:20:01,710 (main --> useConsole[135]) [DEBUG]: 21 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,710 (main --> useConsole[132]) [DEBUG]: For line 95 in readFile: 
+2020-12-03 17:20:01,711 (main --> useConsole[135]) [DEBUG]: 21 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,711 (main --> useConsole[132]) [DEBUG]: For line 96 in readFile: 
+2020-12-03 17:20:01,711 (main --> useConsole[135]) [DEBUG]: 21 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,711 (main --> useConsole[132]) [DEBUG]: For line 97 in readFile: 
+2020-12-03 17:20:01,711 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,711 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,711 (main --> useConsole[132]) [DEBUG]: For line 98 in readFile: 
+2020-12-03 17:20:01,711 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,711 (main --> useConsole[132]) [DEBUG]: For line 99 in readFile: 
+2020-12-03 17:20:01,711 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,711 (main --> useConsole[132]) [DEBUG]: For line 100 in readFile: 
+2020-12-03 17:20:01,711 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,711 (main --> useConsole[132]) [DEBUG]: For line 101 in readFile: 
+2020-12-03 17:20:01,711 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,711 (main --> useConsole[132]) [DEBUG]: For line 102 in readFile: 
+2020-12-03 17:20:01,711 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,711 (main --> useConsole[132]) [DEBUG]: For line 103 in readFile: 
+2020-12-03 17:20:01,711 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,711 (main --> useConsole[132]) [DEBUG]: For line 104 in readFile: 
+2020-12-03 17:20:01,711 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 105 in readFile: 
+2020-12-03 17:20:01,712 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 106 in readFile: 
+2020-12-03 17:20:01,712 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 107 in readFile: 
+2020-12-03 17:20:01,712 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 108 in readFile: 
+2020-12-03 17:20:01,712 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 109 in readFile: 
+2020-12-03 17:20:01,712 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 110 in readFile: 
+2020-12-03 17:20:01,712 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 111 in readFile: 
+2020-12-03 17:20:01,712 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 112 in readFile: 
+2020-12-03 17:20:01,712 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 113 in readFile: 
+2020-12-03 17:20:01,712 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 114 in readFile: 
+2020-12-03 17:20:01,712 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 115 in readFile: 
+2020-12-03 17:20:01,712 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,712 (main --> useConsole[132]) [DEBUG]: For line 116 in readFile: 
+2020-12-03 17:20:01,713 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,713 (main --> useConsole[132]) [DEBUG]: For line 117 in readFile: 
+2020-12-03 17:20:01,713 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,713 (main --> useConsole[132]) [DEBUG]: For line 118 in readFile: 
+2020-12-03 17:20:01,713 (main --> useConsole[135]) [DEBUG]: 22 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,713 (main --> useConsole[132]) [DEBUG]: For line 119 in readFile: 
+2020-12-03 17:20:01,713 (main --> useConsole[135]) [DEBUG]: 24 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,713 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,713 (main --> useConsole[132]) [DEBUG]: For line 120 in readFile: 
+2020-12-03 17:20:01,713 (main --> useConsole[135]) [DEBUG]: 24 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,713 (main --> useConsole[132]) [DEBUG]: For line 121 in readFile: 
+2020-12-03 17:20:01,713 (main --> useConsole[135]) [DEBUG]: 25 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,713 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,713 (main --> useConsole[132]) [DEBUG]: For line 122 in readFile: 
+2020-12-03 17:20:01,713 (main --> useConsole[135]) [DEBUG]: 25 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,713 (main --> useConsole[132]) [DEBUG]: For line 123 in readFile: 
+2020-12-03 17:20:01,713 (main --> useConsole[135]) [DEBUG]: 25 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,713 (main --> useConsole[132]) [DEBUG]: For line 124 in readFile: 
+2020-12-03 17:20:01,713 (main --> useConsole[135]) [DEBUG]: 25 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,713 (main --> useConsole[132]) [DEBUG]: For line 125 in readFile: 
+2020-12-03 17:20:01,713 (main --> useConsole[135]) [DEBUG]: 25 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,713 (main --> useConsole[132]) [DEBUG]: For line 126 in readFile: 
+2020-12-03 17:20:01,713 (main --> useConsole[135]) [DEBUG]: 25 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,714 (main --> useConsole[132]) [DEBUG]: For line 127 in readFile: 
+2020-12-03 17:20:01,714 (main --> useConsole[135]) [DEBUG]: 25 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,714 (main --> useConsole[132]) [DEBUG]: For line 128 in readFile: 
+2020-12-03 17:20:01,714 (main --> useConsole[135]) [DEBUG]: 25 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,714 (main --> useConsole[132]) [DEBUG]: For line 129 in readFile: 
+2020-12-03 17:20:01,714 (main --> useConsole[135]) [DEBUG]: 25 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,714 (main --> useConsole[132]) [DEBUG]: For line 130 in readFile: 
+2020-12-03 17:20:01,714 (main --> useConsole[135]) [DEBUG]: 25 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,714 (main --> useConsole[132]) [DEBUG]: For line 131 in readFile: 
+2020-12-03 17:20:01,714 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,714 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,714 (main --> useConsole[132]) [DEBUG]: For line 132 in readFile: 
+2020-12-03 17:20:01,714 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,714 (main --> useConsole[132]) [DEBUG]: For line 133 in readFile: 
+2020-12-03 17:20:01,714 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,714 (main --> useConsole[132]) [DEBUG]: For line 134 in readFile: 
+2020-12-03 17:20:01,714 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,714 (main --> useConsole[132]) [DEBUG]: For line 135 in readFile: 
+2020-12-03 17:20:01,714 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,714 (main --> useConsole[132]) [DEBUG]: For line 136 in readFile: 
+2020-12-03 17:20:01,714 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,714 (main --> useConsole[132]) [DEBUG]: For line 137 in readFile: 
+2020-12-03 17:20:01,715 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,715 (main --> useConsole[132]) [DEBUG]: For line 138 in readFile: 
+2020-12-03 17:20:01,715 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,715 (main --> useConsole[132]) [DEBUG]: For line 139 in readFile: 
+2020-12-03 17:20:01,715 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,715 (main --> useConsole[132]) [DEBUG]: For line 140 in readFile: 
+2020-12-03 17:20:01,715 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,715 (main --> useConsole[132]) [DEBUG]: For line 141 in readFile: 
+2020-12-03 17:20:01,715 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,715 (main --> useConsole[132]) [DEBUG]: For line 142 in readFile: 
+2020-12-03 17:20:01,715 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,715 (main --> useConsole[132]) [DEBUG]: For line 143 in readFile: 
+2020-12-03 17:20:01,715 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,715 (main --> useConsole[132]) [DEBUG]: For line 144 in readFile: 
+2020-12-03 17:20:01,715 (main --> useConsole[135]) [DEBUG]: 26 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,715 (main --> useConsole[132]) [DEBUG]: For line 145 in readFile: 
+2020-12-03 17:20:01,716 (main --> useConsole[135]) [DEBUG]: 27 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,716 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,716 (main --> useConsole[132]) [DEBUG]: For line 146 in readFile: 
+2020-12-03 17:20:01,716 (main --> useConsole[135]) [DEBUG]: 27 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,716 (main --> useConsole[132]) [DEBUG]: For line 147 in readFile: 
+2020-12-03 17:20:01,716 (main --> useConsole[135]) [DEBUG]: 27 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,716 (main --> useConsole[132]) [DEBUG]: For line 148 in readFile: 
+2020-12-03 17:20:01,716 (main --> useConsole[135]) [DEBUG]: 27 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,716 (main --> useConsole[132]) [DEBUG]: For line 149 in readFile: 
+2020-12-03 17:20:01,716 (main --> useConsole[135]) [DEBUG]: 27 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,716 (main --> useConsole[132]) [DEBUG]: For line 150 in readFile: 
+2020-12-03 17:20:01,716 (main --> useConsole[135]) [DEBUG]: 27 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,716 (main --> useConsole[132]) [DEBUG]: For line 151 in readFile: 
+2020-12-03 17:20:01,716 (main --> useConsole[135]) [DEBUG]: 29 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,716 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,716 (main --> useConsole[132]) [DEBUG]: For line 152 in readFile: 
+2020-12-03 17:20:01,716 (main --> useConsole[135]) [DEBUG]: 29 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,717 (main --> useConsole[132]) [DEBUG]: For line 153 in readFile: 
+2020-12-03 17:20:01,717 (main --> useConsole[135]) [DEBUG]: 29 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,717 (main --> useConsole[132]) [DEBUG]: For line 154 in readFile: 
+2020-12-03 17:20:01,717 (main --> useConsole[135]) [DEBUG]: 29 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,717 (main --> useConsole[132]) [DEBUG]: For line 155 in readFile: 
+2020-12-03 17:20:01,717 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,717 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,717 (main --> useConsole[132]) [DEBUG]: For line 156 in readFile: 
+2020-12-03 17:20:01,718 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,718 (main --> useConsole[132]) [DEBUG]: For line 157 in readFile: 
+2020-12-03 17:20:01,718 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,718 (main --> useConsole[132]) [DEBUG]: For line 158 in readFile: 
+2020-12-03 17:20:01,718 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,718 (main --> useConsole[132]) [DEBUG]: For line 159 in readFile: 
+2020-12-03 17:20:01,718 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,718 (main --> useConsole[132]) [DEBUG]: For line 160 in readFile: 
+2020-12-03 17:20:01,718 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,718 (main --> useConsole[132]) [DEBUG]: For line 161 in readFile: 
+2020-12-03 17:20:01,718 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,718 (main --> useConsole[132]) [DEBUG]: For line 162 in readFile: 
+2020-12-03 17:20:01,718 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,718 (main --> useConsole[132]) [DEBUG]: For line 163 in readFile: 
+2020-12-03 17:20:01,718 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,718 (main --> useConsole[132]) [DEBUG]: For line 164 in readFile: 
+2020-12-03 17:20:01,718 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,718 (main --> useConsole[132]) [DEBUG]: For line 165 in readFile: 
+2020-12-03 17:20:01,718 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 166 in readFile: 
+2020-12-03 17:20:01,719 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 167 in readFile: 
+2020-12-03 17:20:01,719 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 168 in readFile: 
+2020-12-03 17:20:01,719 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 169 in readFile: 
+2020-12-03 17:20:01,719 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 170 in readFile: 
+2020-12-03 17:20:01,719 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 171 in readFile: 
+2020-12-03 17:20:01,719 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 172 in readFile: 
+2020-12-03 17:20:01,719 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 173 in readFile: 
+2020-12-03 17:20:01,719 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 174 in readFile: 
+2020-12-03 17:20:01,719 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 175 in readFile: 
+2020-12-03 17:20:01,719 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 176 in readFile: 
+2020-12-03 17:20:01,719 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,719 (main --> useConsole[132]) [DEBUG]: For line 177 in readFile: 
+2020-12-03 17:20:01,720 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,720 (main --> useConsole[132]) [DEBUG]: For line 178 in readFile: 
+2020-12-03 17:20:01,720 (main --> useConsole[135]) [DEBUG]: 30 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,720 (main --> useConsole[132]) [DEBUG]: For line 179 in readFile: 
+2020-12-03 17:20:01,720 (main --> useConsole[135]) [DEBUG]: 31 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,720 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,720 (main --> useConsole[132]) [DEBUG]: For line 180 in readFile: 
+2020-12-03 17:20:01,720 (main --> useConsole[135]) [DEBUG]: 31 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,720 (main --> useConsole[132]) [DEBUG]: For line 181 in readFile: 
+2020-12-03 17:20:01,720 (main --> useConsole[135]) [DEBUG]: 32 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,720 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,720 (main --> useConsole[132]) [DEBUG]: For line 182 in readFile: 
+2020-12-03 17:20:01,720 (main --> useConsole[135]) [DEBUG]: 32 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,720 (main --> useConsole[132]) [DEBUG]: For line 183 in readFile: 
+2020-12-03 17:20:01,720 (main --> useConsole[135]) [DEBUG]: 32 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,720 (main --> useConsole[132]) [DEBUG]: For line 184 in readFile: 
+2020-12-03 17:20:01,720 (main --> useConsole[135]) [DEBUG]: 32 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,720 (main --> useConsole[132]) [DEBUG]: For line 185 in readFile: 
+2020-12-03 17:20:01,720 (main --> useConsole[135]) [DEBUG]: 32 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,720 (main --> useConsole[132]) [DEBUG]: For line 186 in readFile: 
+2020-12-03 17:20:01,720 (main --> useConsole[135]) [DEBUG]: 32 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,720 (main --> useConsole[132]) [DEBUG]: For line 187 in readFile: 
+2020-12-03 17:20:01,721 (main --> useConsole[135]) [DEBUG]: 32 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,721 (main --> useConsole[132]) [DEBUG]: For line 188 in readFile: 
+2020-12-03 17:20:01,721 (main --> useConsole[135]) [DEBUG]: 32 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,721 (main --> useConsole[132]) [DEBUG]: For line 189 in readFile: 
+2020-12-03 17:20:01,721 (main --> useConsole[135]) [DEBUG]: 33 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,721 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,721 (main --> useConsole[132]) [DEBUG]: For line 190 in readFile: 
+2020-12-03 17:20:01,721 (main --> useConsole[135]) [DEBUG]: 33 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,721 (main --> useConsole[132]) [DEBUG]: For line 191 in readFile: 
+2020-12-03 17:20:01,721 (main --> useConsole[135]) [DEBUG]: 33 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,721 (main --> useConsole[132]) [DEBUG]: For line 192 in readFile: 
+2020-12-03 17:20:01,721 (main --> useConsole[135]) [DEBUG]: 33 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,721 (main --> useConsole[132]) [DEBUG]: For line 193 in readFile: 
+2020-12-03 17:20:01,721 (main --> useConsole[135]) [DEBUG]: 34 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,721 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,721 (main --> useConsole[132]) [DEBUG]: For line 194 in readFile: 
+2020-12-03 17:20:01,721 (main --> useConsole[135]) [DEBUG]: 34 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,721 (main --> useConsole[132]) [DEBUG]: For line 195 in readFile: 
+2020-12-03 17:20:01,721 (main --> useConsole[135]) [DEBUG]: 34 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,721 (main --> useConsole[132]) [DEBUG]: For line 196 in readFile: 
+2020-12-03 17:20:01,721 (main --> useConsole[135]) [DEBUG]: 34 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,721 (main --> useConsole[132]) [DEBUG]: For line 197 in readFile: 
+2020-12-03 17:20:01,721 (main --> useConsole[135]) [DEBUG]: 34 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,722 (main --> useConsole[132]) [DEBUG]: For line 198 in readFile: 
+2020-12-03 17:20:01,722 (main --> useConsole[135]) [DEBUG]: 34 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,722 (main --> useConsole[132]) [DEBUG]: For line 199 in readFile: 
+2020-12-03 17:20:01,722 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,722 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,722 (main --> useConsole[132]) [DEBUG]: For line 200 in readFile: 
+2020-12-03 17:20:01,722 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,722 (main --> useConsole[132]) [DEBUG]: For line 201 in readFile: 
+2020-12-03 17:20:01,722 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,722 (main --> useConsole[132]) [DEBUG]: For line 202 in readFile: 
+2020-12-03 17:20:01,722 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,722 (main --> useConsole[132]) [DEBUG]: For line 203 in readFile: 
+2020-12-03 17:20:01,722 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,722 (main --> useConsole[132]) [DEBUG]: For line 204 in readFile: 
+2020-12-03 17:20:01,722 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,722 (main --> useConsole[132]) [DEBUG]: For line 205 in readFile: 
+2020-12-03 17:20:01,722 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,722 (main --> useConsole[132]) [DEBUG]: For line 206 in readFile: 
+2020-12-03 17:20:01,722 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,722 (main --> useConsole[132]) [DEBUG]: For line 207 in readFile: 
+2020-12-03 17:20:01,722 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,722 (main --> useConsole[132]) [DEBUG]: For line 208 in readFile: 
+2020-12-03 17:20:01,723 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,723 (main --> useConsole[132]) [DEBUG]: For line 209 in readFile: 
+2020-12-03 17:20:01,723 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,723 (main --> useConsole[132]) [DEBUG]: For line 210 in readFile: 
+2020-12-03 17:20:01,723 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,723 (main --> useConsole[132]) [DEBUG]: For line 211 in readFile: 
+2020-12-03 17:20:01,723 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,723 (main --> useConsole[132]) [DEBUG]: For line 212 in readFile: 
+2020-12-03 17:20:01,723 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,723 (main --> useConsole[132]) [DEBUG]: For line 213 in readFile: 
+2020-12-03 17:20:01,723 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,723 (main --> useConsole[132]) [DEBUG]: For line 214 in readFile: 
+2020-12-03 17:20:01,723 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,723 (main --> useConsole[132]) [DEBUG]: For line 215 in readFile: 
+2020-12-03 17:20:01,723 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,723 (main --> useConsole[132]) [DEBUG]: For line 216 in readFile: 
+2020-12-03 17:20:01,723 (main --> useConsole[135]) [DEBUG]: 35 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,723 (main --> useConsole[132]) [DEBUG]: For line 217 in readFile: 
+2020-12-03 17:20:01,723 (main --> useConsole[135]) [DEBUG]: 36 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,723 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,723 (main --> useConsole[132]) [DEBUG]: For line 218 in readFile: 
+2020-12-03 17:20:01,723 (main --> useConsole[135]) [DEBUG]: 36 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,723 (main --> useConsole[132]) [DEBUG]: For line 219 in readFile: 
+2020-12-03 17:20:01,724 (main --> useConsole[135]) [DEBUG]: 36 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,724 (main --> useConsole[132]) [DEBUG]: For line 220 in readFile: 
+2020-12-03 17:20:01,724 (main --> useConsole[135]) [DEBUG]: 36 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,724 (main --> useConsole[132]) [DEBUG]: For line 221 in readFile: 
+2020-12-03 17:20:01,724 (main --> useConsole[135]) [DEBUG]: 37 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,724 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,724 (main --> useConsole[132]) [DEBUG]: For line 222 in readFile: 
+2020-12-03 17:20:01,724 (main --> useConsole[135]) [DEBUG]: 37 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,724 (main --> useConsole[132]) [DEBUG]: For line 223 in readFile: 
+2020-12-03 17:20:01,724 (main --> useConsole[135]) [DEBUG]: 37 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,724 (main --> useConsole[132]) [DEBUG]: For line 224 in readFile: 
+2020-12-03 17:20:01,724 (main --> useConsole[135]) [DEBUG]: 37 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,724 (main --> useConsole[132]) [DEBUG]: For line 225 in readFile: 
+2020-12-03 17:20:01,724 (main --> useConsole[135]) [DEBUG]: 37 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,724 (main --> useConsole[132]) [DEBUG]: For line 226 in readFile: 
+2020-12-03 17:20:01,724 (main --> useConsole[135]) [DEBUG]: 37 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,724 (main --> useConsole[132]) [DEBUG]: For line 227 in readFile: 
+2020-12-03 17:20:01,724 (main --> useConsole[135]) [DEBUG]: 38 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,724 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,724 (main --> useConsole[132]) [DEBUG]: For line 228 in readFile: 
+2020-12-03 17:20:01,724 (main --> useConsole[135]) [DEBUG]: 38 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,724 (main --> useConsole[132]) [DEBUG]: For line 229 in readFile: 
+2020-12-03 17:20:01,725 (main --> useConsole[135]) [DEBUG]: 39 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,725 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,725 (main --> useConsole[132]) [DEBUG]: For line 230 in readFile: 
+2020-12-03 17:20:01,725 (main --> useConsole[135]) [DEBUG]: 39 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,725 (main --> useConsole[132]) [DEBUG]: For line 231 in readFile: 
+2020-12-03 17:20:01,725 (main --> useConsole[135]) [DEBUG]: 40 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,725 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,725 (main --> useConsole[132]) [DEBUG]: For line 232 in readFile: 
+2020-12-03 17:20:01,725 (main --> useConsole[135]) [DEBUG]: 40 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,725 (main --> useConsole[132]) [DEBUG]: For line 233 in readFile: 
+2020-12-03 17:20:01,725 (main --> useConsole[135]) [DEBUG]: 40 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,725 (main --> useConsole[132]) [DEBUG]: For line 234 in readFile: 
+2020-12-03 17:20:01,725 (main --> useConsole[135]) [DEBUG]: 40 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,725 (main --> useConsole[132]) [DEBUG]: For line 235 in readFile: 
+2020-12-03 17:20:01,725 (main --> useConsole[135]) [DEBUG]: 41 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,725 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,725 (main --> useConsole[132]) [DEBUG]: For line 236 in readFile: 
+2020-12-03 17:20:01,725 (main --> useConsole[135]) [DEBUG]: 41 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,725 (main --> useConsole[132]) [DEBUG]: For line 237 in readFile: 
+2020-12-03 17:20:01,725 (main --> useConsole[135]) [DEBUG]: 41 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,725 (main --> useConsole[132]) [DEBUG]: For line 238 in readFile: 
+2020-12-03 17:20:01,725 (main --> useConsole[135]) [DEBUG]: 41 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,726 (main --> useConsole[132]) [DEBUG]: For line 239 in readFile: 
+2020-12-03 17:20:01,726 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,726 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,726 (main --> useConsole[132]) [DEBUG]: For line 240 in readFile: 
+2020-12-03 17:20:01,726 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,726 (main --> useConsole[132]) [DEBUG]: For line 241 in readFile: 
+2020-12-03 17:20:01,726 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,726 (main --> useConsole[132]) [DEBUG]: For line 242 in readFile: 
+2020-12-03 17:20:01,726 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,726 (main --> useConsole[132]) [DEBUG]: For line 243 in readFile: 
+2020-12-03 17:20:01,726 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,726 (main --> useConsole[132]) [DEBUG]: For line 244 in readFile: 
+2020-12-03 17:20:01,726 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,726 (main --> useConsole[132]) [DEBUG]: For line 245 in readFile: 
+2020-12-03 17:20:01,726 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,726 (main --> useConsole[132]) [DEBUG]: For line 246 in readFile: 
+2020-12-03 17:20:01,726 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,726 (main --> useConsole[132]) [DEBUG]: For line 247 in readFile: 
+2020-12-03 17:20:01,726 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,726 (main --> useConsole[132]) [DEBUG]: For line 248 in readFile: 
+2020-12-03 17:20:01,726 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,726 (main --> useConsole[132]) [DEBUG]: For line 249 in readFile: 
+2020-12-03 17:20:01,727 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,727 (main --> useConsole[132]) [DEBUG]: For line 250 in readFile: 
+2020-12-03 17:20:01,727 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,727 (main --> useConsole[132]) [DEBUG]: For line 251 in readFile: 
+2020-12-03 17:20:01,727 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,727 (main --> useConsole[132]) [DEBUG]: For line 252 in readFile: 
+2020-12-03 17:20:01,727 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,727 (main --> useConsole[132]) [DEBUG]: For line 253 in readFile: 
+2020-12-03 17:20:01,727 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,727 (main --> useConsole[132]) [DEBUG]: For line 254 in readFile: 
+2020-12-03 17:20:01,727 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,727 (main --> useConsole[132]) [DEBUG]: For line 255 in readFile: 
+2020-12-03 17:20:01,727 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,727 (main --> useConsole[132]) [DEBUG]: For line 256 in readFile: 
+2020-12-03 17:20:01,727 (main --> useConsole[135]) [DEBUG]: 42 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,727 (main --> useConsole[132]) [DEBUG]: For line 257 in readFile: 
+2020-12-03 17:20:01,727 (main --> useConsole[135]) [DEBUG]: 44 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,727 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,727 (main --> useConsole[132]) [DEBUG]: For line 258 in readFile: 
+2020-12-03 17:20:01,727 (main --> useConsole[135]) [DEBUG]: 44 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,727 (main --> useConsole[132]) [DEBUG]: For line 259 in readFile: 
+2020-12-03 17:20:01,727 (main --> useConsole[135]) [DEBUG]: 44 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,727 (main --> useConsole[132]) [DEBUG]: For line 260 in readFile: 
+2020-12-03 17:20:01,728 (main --> useConsole[135]) [DEBUG]: 44 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,728 (main --> useConsole[132]) [DEBUG]: For line 261 in readFile: 
+2020-12-03 17:20:01,728 (main --> useConsole[135]) [DEBUG]: 45 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,728 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,728 (main --> useConsole[132]) [DEBUG]: For line 262 in readFile: 
+2020-12-03 17:20:01,728 (main --> useConsole[135]) [DEBUG]: 45 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,728 (main --> useConsole[132]) [DEBUG]: For line 263 in readFile: 
+2020-12-03 17:20:01,728 (main --> useConsole[135]) [DEBUG]: 45 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,728 (main --> useConsole[132]) [DEBUG]: For line 264 in readFile: 
+2020-12-03 17:20:01,728 (main --> useConsole[135]) [DEBUG]: 45 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,728 (main --> useConsole[132]) [DEBUG]: For line 265 in readFile: 
+2020-12-03 17:20:01,728 (main --> useConsole[135]) [DEBUG]: 45 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,728 (main --> useConsole[132]) [DEBUG]: For line 266 in readFile: 
+2020-12-03 17:20:01,728 (main --> useConsole[135]) [DEBUG]: 45 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,728 (main --> useConsole[132]) [DEBUG]: For line 267 in readFile: 
+2020-12-03 17:20:01,728 (main --> useConsole[135]) [DEBUG]: 46 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,728 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,728 (main --> useConsole[132]) [DEBUG]: For line 268 in readFile: 
+2020-12-03 17:20:01,728 (main --> useConsole[135]) [DEBUG]: 46 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,728 (main --> useConsole[132]) [DEBUG]: For line 269 in readFile: 
+2020-12-03 17:20:01,728 (main --> useConsole[135]) [DEBUG]: 47 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,728 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,728 (main --> useConsole[132]) [DEBUG]: For line 270 in readFile: 
+2020-12-03 17:20:01,729 (main --> useConsole[135]) [DEBUG]: 47 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,729 (main --> useConsole[132]) [DEBUG]: For line 271 in readFile: 
+2020-12-03 17:20:01,729 (main --> useConsole[135]) [DEBUG]: 47 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,729 (main --> useConsole[132]) [DEBUG]: For line 272 in readFile: 
+2020-12-03 17:20:01,729 (main --> useConsole[135]) [DEBUG]: 47 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,729 (main --> useConsole[132]) [DEBUG]: For line 273 in readFile: 
+2020-12-03 17:20:01,729 (main --> useConsole[135]) [DEBUG]: 47 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,729 (main --> useConsole[132]) [DEBUG]: For line 274 in readFile: 
+2020-12-03 17:20:01,729 (main --> useConsole[135]) [DEBUG]: 47 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,729 (main --> useConsole[132]) [DEBUG]: For line 275 in readFile: 
+2020-12-03 17:20:01,729 (main --> useConsole[135]) [DEBUG]: 48 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,729 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,729 (main --> useConsole[132]) [DEBUG]: For line 276 in readFile: 
+2020-12-03 17:20:01,729 (main --> useConsole[135]) [DEBUG]: 48 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,729 (main --> useConsole[132]) [DEBUG]: For line 277 in readFile: 
+2020-12-03 17:20:01,729 (main --> useConsole[135]) [DEBUG]: 49 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,729 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,729 (main --> useConsole[132]) [DEBUG]: For line 278 in readFile: 
+2020-12-03 17:20:01,729 (main --> useConsole[135]) [DEBUG]: 49 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,729 (main --> useConsole[132]) [DEBUG]: For line 279 in readFile: 
+2020-12-03 17:20:01,729 (main --> useConsole[135]) [DEBUG]: 49 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,729 (main --> useConsole[132]) [DEBUG]: For line 280 in readFile: 
+2020-12-03 17:20:01,730 (main --> useConsole[135]) [DEBUG]: 49 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,730 (main --> useConsole[132]) [DEBUG]: For line 281 in readFile: 
+2020-12-03 17:20:01,730 (main --> useConsole[135]) [DEBUG]: 49 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,730 (main --> useConsole[132]) [DEBUG]: For line 282 in readFile: 
+2020-12-03 17:20:01,730 (main --> useConsole[135]) [DEBUG]: 49 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,730 (main --> useConsole[132]) [DEBUG]: For line 283 in readFile: 
+2020-12-03 17:20:01,730 (main --> useConsole[135]) [DEBUG]: 49 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,730 (main --> useConsole[132]) [DEBUG]: For line 284 in readFile: 
+2020-12-03 17:20:01,730 (main --> useConsole[135]) [DEBUG]: 49 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,730 (main --> useConsole[132]) [DEBUG]: For line 285 in readFile: 
+2020-12-03 17:20:01,730 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,730 (main --> useConsole[138]) [DEBUG]: 'Imperdiet' in this line?: True
+2020-12-03 17:20:01,730 (main --> useConsole[132]) [DEBUG]: For line 286 in readFile: 
+2020-12-03 17:20:01,730 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,730 (main --> useConsole[132]) [DEBUG]: For line 287 in readFile: 
+2020-12-03 17:20:01,730 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,730 (main --> useConsole[132]) [DEBUG]: For line 288 in readFile: 
+2020-12-03 17:20:01,730 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,730 (main --> useConsole[132]) [DEBUG]: For line 289 in readFile: 
+2020-12-03 17:20:01,730 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,730 (main --> useConsole[132]) [DEBUG]: For line 290 in readFile: 
+2020-12-03 17:20:01,730 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,730 (main --> useConsole[132]) [DEBUG]: For line 291 in readFile: 
+2020-12-03 17:20:01,731 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,731 (main --> useConsole[132]) [DEBUG]: For line 292 in readFile: 
+2020-12-03 17:20:01,731 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,731 (main --> useConsole[132]) [DEBUG]: For line 293 in readFile: 
+2020-12-03 17:20:01,731 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,731 (main --> useConsole[132]) [DEBUG]: For line 294 in readFile: 
+2020-12-03 17:20:01,731 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,731 (main --> useConsole[132]) [DEBUG]: For line 295 in readFile: 
+2020-12-03 17:20:01,731 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,731 (main --> useConsole[132]) [DEBUG]: For line 296 in readFile: 
+2020-12-03 17:20:01,731 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,731 (main --> useConsole[132]) [DEBUG]: For line 297 in readFile: 
+2020-12-03 17:20:01,731 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,731 (main --> useConsole[132]) [DEBUG]: For line 298 in readFile: 
+2020-12-03 17:20:01,732 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,732 (main --> useConsole[132]) [DEBUG]: For line 299 in readFile: 
+2020-12-03 17:20:01,732 (main --> useConsole[135]) [DEBUG]: 51 instances of 'imperdiet' thus far.
+2020-12-03 17:20:01,732 (main --> useConsole[142]) [DEBUG]: # Display final stats of log, output 'consoleapp.log' file
+2020-12-03 17:20:01,732 (main --> useConsole[144]) [DEBUG]: Found 51 occurrences of the word 'imperdiet'.
+
+2020-12-03 17:20:01,732 (main --> useConsole[146]) [DEBUG]: There were 43 sentences containing 'imperdiet'.
+
+2020-12-03 17:20:01,732 (main --> main[161]) [INFO]: End execution time = 1607044801.732739
+2020-12-03 17:20:01,732 (main --> main[164]) [INFO]: Total runtime: 4.170654773712158
