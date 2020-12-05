@@ -15,6 +15,16 @@ logging.config.fileConfig('logging.conf', disable_existing_loggers=False)
 # Create logger instance
 logger = logging.getLogger(__name__)
 
+# A simple function to dynamically change the desired log level of the log output
+def resetLogLevel():
+    logger.info("Simple function to dynamically change the desired log level of the log output")
+    logLevel = input("Please enter the desired log level. Default is DEBUG: ")
+    while (logLevel.lower() not in ("debug", "info", "warning", "error", "critical")):
+        logLevel = input("Please enter the desired log level. Default is DEBUG: ")
+    logger.setLevel(logLevel.upper())
+    for handler in logger.handlers:
+        handler.setLevel(logLevel.upper())
+
 """
 Counts the number of times the word, "imperdiet" appears in the given text
 
@@ -58,6 +68,15 @@ def getAverageTimePerLine(elapsedTime, totalLines):
 def useConsole():
 
     logger.debug("useConsole() called")
+
+    # Allow user to customize level of logging output
+    customizedRootLogLevel = 'n'
+    customizedRootLogLevel = input("Customize root log level? Default is DEBUG/TRACE. Enter 'n' for no or 'y' for yes:")
+    if (customizedRootLogLevel.lower() == 'y'):
+        logger.info("Calling resetLogLevel() now.")
+        resetLogLevel()
+    while (customizedRootLogLevel.lower() != 'y' and customizedRootLogLevel.lower() != 'n'):
+        customizedRootLogLevel = input("Customize root log level? Default is DEBUG/TRACE. Enter 'n' for no or 'y' for yes:")
 
     ## Counters
     logger.info("INIT COUNTERS")
@@ -205,7 +224,7 @@ def useConsole():
             logger.debug("totalLines is now " + str(totalLines) + " lines.")
 
             try:
-                logger.debug("Writing line #" + (totalLines - 1) + " to output .txt file...")
+                logger.debug("Writing line #" + str((totalLines - 1)) + " to output .txt file...")
                 openFile.write(userIn + '\n')
 
                 # Mark the endTime of writing the line
@@ -236,9 +255,10 @@ def useConsole():
         print("\nUser entered " + str(totalLines) + " sentences.\n")
 
         # performanceStats = (averageTimeToReadOrWriteLine, averageTimeToFindImperdiet, fileMode)
-        # Tuple containing the performance stats
+        # Update tuple containing the performance stats
         logger.info("# performanceStats = (averageTimeToReadOrWriteLine, averageTimeToFindImperdiet, fileMode)")
         performanceStats = (averageTimeToWriteLine, averageImperdietSearchTime, fileMode)
+    ## END WRITE OPERATION
 
     ####
     ## 'READ' mode:
@@ -306,12 +326,19 @@ def useConsole():
         # Calculate average time to find the word 'imperdiet' in a sentence
         averageImperdietSearchTime = getAverageTimePerLine(imperdietSearchTime, sentencesContainingImperdiet)
         logger.debug("Average imperdiet search time: " + str(round(averageImperdietSearchTime, 4)) + " seconds.")
-        logger.info("End of file-reading process")
 
         # Calculate average time to read each line
         logger.info("# Calculate average time to read each line")
-        averageReadTime = getAverageTimePerLine(getElapsedTime(endReadTime, startReadTime), totalLines)
-        logger.info("Average time to read each line: " + str(round(averageReadTime, 4)) + " seconds.")
+        averageTimeToReadLine = getAverageTimePerLine(getElapsedTime(endReadTime, startReadTime), totalLines)
+        logger.info("Average time to read each line: " + str(round(averageTimeToReadLine, 4)) + " seconds.")
+
+        # performanceStats = (averageTimeToReadOrWriteLine, averageTimeToFindImperdiet, fileMode)
+        # Update tuple containing the performance stats
+        logger.info("# performanceStats = (averageTimeToReadOrWriteLine, averageTimeToFindImperdiet, fileMode)")
+        performanceStats = (averageTimeToReadLine, averageImperdietSearchTime, fileMode)
+
+        logger.info("End of file-reading process")
+    ## END READ OPERATION
 
     # Close the file we have written to/read from
     logger.info("# Try to close the file we have written to/read from")
@@ -357,8 +384,9 @@ def main():
 
     printStats = input("Print out overall performance stats for program? Enter 'Y' for 'yes' or anything else for 'no': ")
     if (printStats.lower() == 'y'):
-        print("Total execution time = " + str(round(totalRuntime, 4)) + " seconds.")
-        print(performanceStats)
+        print("Total execution time = " + str(round(totalRuntime, 4)) + " seconds.\n")
+        print("Average time to read or write a line: " + str(round(performanceStats[0], 4)) + " seconds\n")
+        print("Average time to find the word 'imperdiet' in a line: " + str(round(performanceStats[1], 4)) + " seconds.")
 
     logger.info("Program finished.")
 
